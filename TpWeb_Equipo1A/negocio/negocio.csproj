@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0CC4A5D-78C4-4099-AB49-63B13E5DEE5A}</ProjectGuid>
+    <ProjectGuid>{95654CB5-74FA-4782-92E3-3A12F5C0E1D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>negocio</RootNamespace>
@@ -42,7 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoDatos.cs" />
+    <Compile Include="articuloNegocio.cs" />
+    <Compile Include="categoriaNegocio.cs" />
+    <Compile Include="imagenNegocio.cs" />
+    <Compile Include="marcaNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dominio\dominio.csproj">
+      <Project>{fdc8e03d-f5e7-4e1b-8691-239f771001dd}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
