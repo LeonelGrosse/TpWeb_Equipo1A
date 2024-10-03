@@ -9,8 +9,8 @@ namespace dominio
     public class voucher
     {
         public string codigo { get; set; }
-        public cliente cliente { get; set; }
+        public int idCliente { get; set; }
         public DateTime fechaCanje { get; set; }
-        public articulo articulo { get; set; }
+        public int idArticulo { get; set; }
     }
 }

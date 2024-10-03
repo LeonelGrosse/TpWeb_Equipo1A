@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,10 @@ namespace PromoWeb
 
         protected void btnCanjear_Click(object sender, EventArgs e)
         {
+            voucherNegocio negocio = new voucherNegocio();
 
+            dgvVouchers.DataSource = negocio.Listar(txtVoucher.Text);
+            dgvVouchers.DataBind();
         }
     }
 }

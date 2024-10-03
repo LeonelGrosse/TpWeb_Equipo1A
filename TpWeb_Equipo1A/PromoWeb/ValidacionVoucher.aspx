@@ -16,6 +16,8 @@
             </div>
             <asp:Button Text="CANJEAR" CssClass="btn btn-primary" ID="btnCanjear" onclick="btnCanjear_Click" runat="server" />
 
+            <asp:GridView runat="server" ID="dgvVouchers"></asp:GridView>
+
         </div>
         <div class="col-2"></div>
     </div>

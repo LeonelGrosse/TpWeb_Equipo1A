@@ -12,12 +12,12 @@ namespace negocio
         List<voucher> lista = new List<voucher>();
         accesoDatos datos = new accesoDatos();
 
-        public List<voucher> Listar()
+        public List<voucher> Listar(string codigo)
         {
 
-            string select = "";
-            string from = "";
-            string where = "";
+            string select = "select CodigoVoucher, IdCliente, FechaCanje, IdArticulo ";
+            string from = "from Vouchers ";
+            string where = "WHERE CodigoVoucher like ('" + codigo + "') ";
 
             try
             {
@@ -27,6 +27,15 @@ namespace negocio
                 while (datos.Lector.Read())
                 {
                     voucher aux = new voucher();
+
+                    aux.codigo = (string)datos.Lector["CodigoVoucher"];
+
+                    if(!(datos.Lector["FechaCanje"] is DBNull))
+                    {
+                        aux.idCliente = (int)datos.Lector["IdCliente"];
+                        aux.fechaCanje = (DateTime)datos.Lector["FechaCanje"];
+                        aux.idArticulo = (int)datos.Lector["IdArticulo"];
+                    }
 
                     lista.Add(aux);
 
