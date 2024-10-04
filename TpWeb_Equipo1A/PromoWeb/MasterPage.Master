@@ -34,14 +34,6 @@
                 </div>
             </nav>
 
-            <div class="container mt-5">
-                <div class="mb-3">
-                    <label for="voucherCode" class="lbIngresarCodigo">Ingresá el código de tu voucher!</label>
-                    <input type="text" class="fmBuscar" id="voucherCode" placeholder="XXXXXXXXXXXXXXX">
-                </div>
-                <button id="btnSiguiente" type="submit" cssclass="btn btn-primary">Siguiente</button>
-            </div>
-
             <div class="container">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
             </div>
