@@ -73,7 +73,6 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="Content\styles.css" />
-    <Content Include="ValidacionVoucher.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,13 +108,6 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidacionVoucher.aspx.cs">
-      <DependentUpon>ValidacionVoucher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ValidacionVoucher.aspx.designer.cs">
-      <DependentUpon>ValidacionVoucher.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />
