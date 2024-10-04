@@ -70,6 +70,8 @@
     <Content Include="CatalogoPremios.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Content\styles.css" />
     <Content Include="ValidacionVoucher.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
