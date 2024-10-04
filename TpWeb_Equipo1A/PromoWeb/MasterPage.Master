@@ -25,10 +25,10 @@
 
                     <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/CatalogoPremios.aspx">INGRESO CÓDIGO</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/ValidacionVoucher.aspx">INGRESO CÓDIGO</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/CatalogoPremios.aspx">SELECCIÓN DE PREMIO</a></li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/CatalogoPremios.aspx">CARGA DATOS CLIENTE O VALIDACIÓN</a></li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/CatalogoPremios.aspx">CARGAR EL CANJE</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/DatoCliente.aspx">CARGA DATOS CLIENTE O VALIDACIÓN</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/">CARGAR EL CANJE</a></li>
                         </ul>
                     </div>
                 </div>

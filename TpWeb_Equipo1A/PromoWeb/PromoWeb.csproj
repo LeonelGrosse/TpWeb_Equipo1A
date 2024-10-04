@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CatalogoPremios.aspx" />
+    <Content Include="DatoCliente.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\scripts.js" />
@@ -82,6 +83,13 @@
     </Compile>
     <Compile Include="CatalogoPremios.aspx.designer.cs">
       <DependentUpon>CatalogoPremios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatoCliente.aspx.cs">
+      <DependentUpon>DatoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatoCliente.aspx.designer.cs">
+      <DependentUpon>DatoCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
