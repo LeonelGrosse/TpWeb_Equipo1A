@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="DatoCliente.aspx.cs" Inherits="PromoWeb.DatoCliente" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Content/styles.css" rel="stylesheet" />
     <script src="Scripts/scripts.js"></script>
