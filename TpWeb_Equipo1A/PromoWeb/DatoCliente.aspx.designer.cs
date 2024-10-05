@@ -24,13 +24,13 @@ namespace PromoWeb
         protected global::System.Web.UI.WebControls.Label lblDNI;
 
         /// <summary>
-        /// Control TextBoxDNI.
+        /// Control txtBoxDNI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDNI;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxDNI;
 
         /// <summary>
         /// Control lblNombre.

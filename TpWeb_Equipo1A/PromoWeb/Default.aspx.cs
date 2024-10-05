@@ -42,7 +42,9 @@ namespace PromoWeb
             catch (Exception ex)
             {
                 Response.Redirect("Error.aspx", false);
+                throw ex;
             }
         }
+
     }
 }
