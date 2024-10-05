@@ -26,7 +26,9 @@ namespace PromoWeb
 
         protected void btnCanjear_Click(object sender, EventArgs e)
         {
+            string codigo = Request.Params["codigo"];
             string valor = ((Button)sender).CommandArgument;
+            Response.Redirect("DatoCliente.aspx?idArticulo=" + valor + "&codigo=" + codigo, false);
         }
     }
 }

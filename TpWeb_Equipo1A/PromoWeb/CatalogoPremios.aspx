@@ -5,7 +5,7 @@
     <script src="Scripts/scripts.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Selecciona tu premio</h2>
+    <h2 class="h2Catalogo">Selecciona tu premio</h2>
     <hr />
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -20,7 +20,7 @@
                             <p class="card-text"><%#Eval("descripcion")%></p>
                         </div>
                         <div class="card-footer">
-                            <asp:Button ID="btnCanjear" runat="server" Text="Canjear" CssClass="btn btn-primary" CommandArgument='<%#Eval("idArticulo")%>' CommandName="IDArticulo" OnClick="btnCanjear_Click"/>
+                            <asp:Button ID="btnCanjear" runat="server" Text="Elegir este premio" CssClass="btn btn-primary" CommandArgument='<%#Eval("idArticulo")%>' CommandName="IDArticulo" OnClick="btnCanjear_Click"/>
                         </div>
                     </div>
                 </div>

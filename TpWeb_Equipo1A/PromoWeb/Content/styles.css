@@ -4,9 +4,13 @@
 
 .card-img-top {
     height: 350px;
-    width: auto;
+    width: 85%;
+    align-self: center;
 }
 
+.h2Catalogo{
+    text-align: center;
+}
 
 .form-container {
     max-width: 600px;
