@@ -15,13 +15,13 @@ namespace PromoWeb
     {
 
         /// <summary>
-        /// Control LabelDNI.
+        /// Control lblDNI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDNI;
+        protected global::System.Web.UI.WebControls.Label lblDNI;
 
         /// <summary>
         /// Control TextBoxDNI.
@@ -33,129 +33,138 @@ namespace PromoWeb
         protected global::System.Web.UI.WebControls.TextBox TextBoxDNI;
 
         /// <summary>
-        /// Control LabelNombre.
+        /// Control lblNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelNombre;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
-        /// Control TextBoxNombre.
+        /// Control txtBoxNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxNombre;
 
         /// <summary>
-        /// Control LabelApellido.
+        /// Control lblApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelApellido;
+        protected global::System.Web.UI.WebControls.Label lblApellido;
 
         /// <summary>
-        /// Control TextBoxApellido.
+        /// Control txtBoxApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxApellido;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxApellido;
 
         /// <summary>
-        /// Control LabelEmail.
+        /// Control lblEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelEmail;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// Control TextBoxEmail.
+        /// Control txtBoxEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxEmail;
 
         /// <summary>
-        /// Control LabelDireccion.
+        /// Control lblDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDireccion;
+        protected global::System.Web.UI.WebControls.Label lblDireccion;
 
         /// <summary>
-        /// Control TextBoxDireccion.
+        /// Control txtBoxDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDireccion;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxDireccion;
 
         /// <summary>
-        /// Control LabelCiudad.
+        /// Control lblCiudad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelCiudad;
+        protected global::System.Web.UI.WebControls.Label lblCiudad;
 
         /// <summary>
-        /// Control TextBoxCiudad.
+        /// Control txtBoxCiudad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxCiudad;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxCiudad;
 
         /// <summary>
-        /// Control LabelCP.
+        /// Control lblCP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelCP;
+        protected global::System.Web.UI.WebControls.Label lblCP;
 
         /// <summary>
-        /// Control TextBoxCP.
+        /// Control txtBoxCP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxCP;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxCP;
 
         /// <summary>
-        /// Control CheckBoxTerms.
+        /// Control lblErrorDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxTerms;
+        protected global::System.Web.UI.WebControls.Label lblErrorDireccion;
 
         /// <summary>
-        /// Control ButtonParticipar.
+        /// Control chkBoxTerms.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonParticipar;
+        protected global::System.Web.UI.WebControls.CheckBox chkBoxTerms;
+
+        /// <summary>
+        /// Control BtnParticipar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnParticipar;
     }
 }
