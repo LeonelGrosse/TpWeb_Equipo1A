@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Net.Mail;
+using System.Runtime.Remoting;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,10 +14,10 @@ namespace PromoWeb
 {
     public partial class DatoCliente : System.Web.UI.Page
     {
+        ClienteNegocio negocio = new ClienteNegocio();
         public List<cliente> listaClientes { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            ClienteNegocio negocio = new ClienteNegocio();
             listaClientes = negocio.listar();
             if(!IsPostBack)
             {
@@ -26,12 +28,25 @@ namespace PromoWeb
         protected void ButtonParticipar_Click(object sender, EventArgs e)
         {
             lblErrorDireccion.Text = string.Empty;
+            cliente cliente = new cliente();
             try
             {
                 if(!ValidarCampos())
                 {
                     return;
-                }    
+                }
+
+                cliente.dni = txtBoxDNI.Text;
+                cliente.nombre = txtBoxNombre.Text;
+                cliente.apellido = txtBoxApellido.Text;
+                cliente.email = txtBoxEmail.Text;
+                cliente.direccion = txtBoxDireccion.Text;
+                cliente.ciudad = txtBoxCiudad.Text;
+                cliente.codigoPostal = int.Parse(txtBoxCP.Text);
+
+                negocio.agregar(cliente);
+
+                Response.Redirect("Exito.aspx", false);
             }
             catch (Exception ex)
             {
