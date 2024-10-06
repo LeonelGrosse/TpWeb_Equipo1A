@@ -8,4 +8,7 @@
     <div>
         <h3>Mucha suerte!</h3>
     </div>
+    <div>
+        <p>Puede cerrar esta ventana</p>
+    </div>
 </asp:Content>
