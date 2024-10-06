@@ -1,25 +1,25 @@
-﻿using dominio;
-using negocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using dominio;
+using negocio;
 
 namespace PromoWeb
 {
     public partial class DatoCliente : System.Web.UI.Page
     {
+        public List<cliente> listaClientes { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            ClienteNegocio negocio = new ClienteNegocio();
+            listaClientes = negocio.listar();
             if(!IsPostBack)
             {
                 lblErrorDireccion.Text = string.Empty;
-                List<cliente> list = new List<cliente>();
-                cliente aux = new cliente();
-                list = aux.listar();
             }
         }
 
@@ -93,7 +93,18 @@ namespace PromoWeb
 
         protected void txtBoxDNI_TextChanged(object sender, EventArgs e)
         {
-          
+            foreach (var cliente in listaClientes)
+            {
+                if(txtBoxDNI.Text == cliente.dni)
+                {
+                    txtBoxNombre.Text = cliente.nombre;
+                    txtBoxApellido.Text = cliente.apellido;
+                    txtBoxEmail.Text = cliente.email;
+                    txtBoxDireccion.Text = cliente.direccion;
+                    txtBoxCiudad.Text = cliente.ciudad;
+                    txtBoxCP.Text = cliente.codigoPostal.ToString();
+                }
+            }
         }
     }
 }
