@@ -8,7 +8,7 @@
         <h2>Ingresa tus datos</h2>
         <div class="form-group">
             <asp:Label ID="lblDNI" runat="server" Text="DNI:" CssClass="form-label"></asp:Label>
-            <asp:TextBox ID="txtBoxDNI" runat="server" Placeholder="99887777" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtBoxDNI" runat="server" Placeholder="99887777" CssClass="form-control" OnTextChanged="txtBoxDNI_TextChanged"></asp:TextBox>
         </div>
         <div class="form-group">
             <asp:Label ID="lblNombre" runat="server" Text="Nombre:" CssClass="form-label"></asp:Label>

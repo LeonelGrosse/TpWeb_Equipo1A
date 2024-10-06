@@ -1,4 +1,5 @@
-﻿using negocio;
+﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,9 @@ namespace PromoWeb
             if(!IsPostBack)
             {
                 lblErrorDireccion.Text = string.Empty;
+                List<cliente> list = new List<cliente>();
+                cliente aux = new cliente();
+                list = aux.listar();
             }
         }
 
@@ -85,6 +89,11 @@ namespace PromoWeb
             {
                 return false;
             }
+        }
+
+        protected void txtBoxDNI_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }
