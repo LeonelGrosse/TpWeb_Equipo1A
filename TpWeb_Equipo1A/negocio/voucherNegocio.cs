@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.SqlServer.Server;
 using dominio;
+using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace negocio
 {
@@ -30,7 +33,7 @@ namespace negocio
 
                     aux.codigo = (string)datos.Lector["CodigoVoucher"];
 
-                    if(!(datos.Lector["FechaCanje"] is DBNull))
+                    if (!(datos.Lector["FechaCanje"] is DBNull))
                     {
                         aux.idCliente = (int)datos.Lector["IdCliente"];
                         aux.fechaCanje = (DateTime)datos.Lector["FechaCanje"];
@@ -52,8 +55,29 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
-
         }
+        public void modificar(voucher vou)
+        {
+            accesoDatos datos = new accesoDatos();
+            try
+            {
+                datos.setConsulta("Update Vouchers set IdCliente= @IdCliente, FechaCanje= @FechaCanje, IdArticulo= @IdArticulo Where CodigoVoucher like @codigo");
+                datos.setParametro("@IdCliente", vou.idCliente);
+                datos.setParametro("@FechaCanje", vou.fechaCanje);
+                datos.setParametro("@IdArticulo", vou.idArticulo);
+                datos.setParametro("@codigo", vou.codigo);
 
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

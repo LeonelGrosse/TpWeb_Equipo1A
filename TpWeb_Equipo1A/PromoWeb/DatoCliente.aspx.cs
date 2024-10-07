@@ -15,6 +15,8 @@ namespace PromoWeb
     public partial class DatoCliente : System.Web.UI.Page
     {
         ClienteNegocio negocio = new ClienteNegocio();
+        ClienteNegocio negocioAux = new ClienteNegocio();
+        voucherNegocio voucherNegocio = new voucherNegocio();
         public List<cliente> listaClientes { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,7 +30,7 @@ namespace PromoWeb
         protected void ButtonParticipar_Click(object sender, EventArgs e)
         {
             lblErrorDireccion.Text = string.Empty;
-            cliente cliente = new cliente();
+            cliente aux = new cliente();
             try
             {
                 if(!ValidarCampos())
@@ -36,16 +38,49 @@ namespace PromoWeb
                     return;
                 }
 
-                cliente.dni = txtBoxDNI.Text;
-                cliente.nombre = txtBoxNombre.Text;
-                cliente.apellido = txtBoxApellido.Text;
-                cliente.email = txtBoxEmail.Text;
-                cliente.direccion = txtBoxDireccion.Text;
-                cliente.ciudad = txtBoxCiudad.Text;
-                cliente.codigoPostal = int.Parse(txtBoxCP.Text);
+                aux.dni = txtBoxDNI.Text;
+                aux.nombre = txtBoxNombre.Text;
+                aux.apellido = txtBoxApellido.Text;
+                aux.email = txtBoxEmail.Text;
+                aux.direccion = txtBoxDireccion.Text;
+                aux.ciudad = txtBoxCiudad.Text;
+                aux.codigoPostal = int.Parse(txtBoxCP.Text);
 
-                negocio.agregar(cliente);
+                string codigoArticulo = Request.Params["codigo"];
+                int idArt = int.Parse(Request.Params["idArticulo"]);
 
+                voucher voucher = new voucher();
+
+                foreach (var cliente in listaClientes)
+                {
+                    if (txtBoxDNI.Text == cliente.dni)
+                    {
+                        voucher.codigo = codigoArticulo;
+                        voucher.idCliente = cliente.idCliente;
+                        voucher.fechaCanje = DateTime.Today.Date;
+                        voucher.idArticulo = idArt;
+                        voucherNegocio.modificar(voucher);
+                        Response.Redirect("Exito.aspx", false);
+                    }
+                }
+                negocio.agregar(aux);
+
+                List<cliente> listaClientesAux = new List<cliente>();
+                listaClientesAux = negocioAux.listar();
+
+                foreach (var cliente in listaClientesAux)
+                {
+                    if(cliente.dni == aux.dni)
+                    {
+                        aux.idCliente = cliente.idCliente;
+                    }
+                }
+
+                voucher.codigo = codigoArticulo;
+                voucher.idCliente = aux.idCliente;
+                voucher.fechaCanje = DateTime.Today.Date;
+                voucher.idArticulo = idArt;
+                voucherNegocio.modificar(voucher);
                 Response.Redirect("Exito.aspx", false);
             }
             catch (Exception ex)
