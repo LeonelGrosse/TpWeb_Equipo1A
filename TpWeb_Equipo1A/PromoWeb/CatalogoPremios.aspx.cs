@@ -12,10 +12,13 @@ namespace PromoWeb
     public partial class CatalogoPremios : System.Web.UI.Page
     {
         public List<articulo> ListaArticulo { get; set; }
+        public List<imagen> ListaImagen { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             articuloNegocio negocio = new articuloNegocio();
             ListaArticulo = negocio.listar();
+            imagenNegocio imagenNegocio = new imagenNegocio();
+            ListaImagen = imagenNegocio.listar();
 
             if (!IsPostBack)
             {

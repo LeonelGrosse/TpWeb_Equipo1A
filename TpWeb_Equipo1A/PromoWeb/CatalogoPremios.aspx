@@ -14,18 +14,25 @@
             <ItemTemplate>
                 <div class="col">
                     <div class="card h-100">
+                        <!--   
+                        <asp:Repeater ID="repetidor" runat="server">
+                            <ItemTemplate>
+                                <img src="<%#Eval("urlImagen") %>" class="card-img-top" alt="...">
+                            </ItemTemplate>
+                        </asp:Repeater>
+                         -->
                         <img src="<%#Eval("imagen.urlImagen") %>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><%#Eval("nombre")%></h5>
                             <p class="card-text"><%#Eval("descripcion")%></p>
                         </div>
                         <div class="card-footer">
-                            <asp:Button ID="btnCanjear" runat="server" Text="Elegir este premio" CssClass="btn btn-primary" CommandArgument='<%#Eval("idArticulo")%>' CommandName="IDArticulo" OnClick="btnCanjear_Click"/>
+                            <asp:Button ID="btnCanjear" runat="server" Text="Elegir este premio" CssClass="btn btn-primary" CommandArgument='<%#Eval("idArticulo")%>' CommandName="IDArticulo" OnClick="btnCanjear_Click" />
                         </div>
                     </div>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
-
     </div>
+
 </asp:Content>
